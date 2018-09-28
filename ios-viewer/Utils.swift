@@ -223,6 +223,9 @@ func nsNumArrayToIntArray(_ nsNumberArray: [NSNumber]) -> [Int] {
             "calculatedData.RScoreSpeed",
             "calculatedData.RScoreAgility",
             "calculatedData.RScoreDrivingAbility",
+            "calculatedData.avgSwitchCycleTime",
+            "calculatedData.avgScaleCycleTime",
+            "calculatedData.avgExchangeCycleTime",
         ]
         
         /**
@@ -794,6 +797,9 @@ func nsNumArrayToIntArray(_ nsNumberArray: [NSNumber]) -> [Int] {
         "calculatedData.maxScaleCubes" : "Max SC Cubes",
         "calculatedData.maxExchangeCubes" : "Max EX Cubes",
         "calculatedData.avgSwitchOwnership" : "Avg. Switch Ownership",
+        "calculatedData.avgSwitchCycleTime" : "Avg. Switch Cycle Time",
+        "calculatedData.avgScaleCycleTime" : "Avg. Scale Cycle Time",
+        "calculatedData.avgExchangeCycleTime" : "Avg. Exchange Cycle Time",
     ]
     
     /**

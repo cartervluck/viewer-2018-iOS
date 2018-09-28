@@ -121,6 +121,9 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     static let teleopOpponentSwitchAbility = "teleopOpponentSwitchAbility"
     static let maxScaleCubes = "maxScaleCubes"
     static let maxExchangeCubes = "maxExchangeCubes"
+    static let avgSwitchCycleTime = "avgSwitchCycleTime"
+    static let avgScaleCycleTime = "avgScaleCycleTime"
+    static let avgExchangeCycleTime = "avgExchangeCycleTime"
  }
 
   // MARK: Properties
@@ -232,6 +235,9 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     @objc public var teleopOpponentSwitchAbility: Float = -1.0
     @objc public var maxScaleCubes: Int = -1
     @objc public var maxExchangeCubes: Int = -1
+    @objc public var avgSwitchCycleTime: Float = -1.0
+    @objc public var avgScaleCycleTime: Float = -1.0
+    @objc public var avgExchangeCycleTime: Float = -1.0
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -358,6 +364,9 @@ public final class CalculatedTeamData: NSObject, NSCoding {
        teleopOpponentSwitchAbility = json[SerializationKeys.teleopOpponentSwitchAbility].floatValue
        maxScaleCubes = json[SerializationKeys.maxScaleCubes].intValue
        maxExchangeCubes = json[SerializationKeys.maxExchangeCubes].intValue
+    avgSwitchCycleTime = json[SerializationKeys.avgSwitchCycleTime].floatValue
+    avgScaleCycleTime = json[SerializationKeys.avgScaleCycleTime].floatValue
+    avgExchangeCycleTime = json[SerializationKeys.avgExchangeCycleTime].floatValue
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -475,6 +484,9 @@ public final class CalculatedTeamData: NSObject, NSCoding {
         dictionary[SerializationKeys.teleopOpponentSwitchAbility] = teleopOpponentSwitchAbility
         dictionary[SerializationKeys.maxScaleCubes] = maxScaleCubes
         dictionary[SerializationKeys.maxExchangeCubes] = maxExchangeCubes
+    dictionary[SerializationKeys.avgSwitchCycleTime] = avgSwitchCycleTime
+    dictionary[SerializationKeys.avgScaleCycleTime] = avgScaleCycleTime
+    dictionary[SerializationKeys.avgExchangeCycleTime] = avgExchangeCycleTime
     return dictionary
   }
 
@@ -588,6 +600,9 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     self.teleopOpponentSwitchAbility = aDecoder.decodeFloat(forKey: SerializationKeys.teleopOpponentSwitchAbility)
     self.maxScaleCubes = aDecoder.decodeInteger(forKey: SerializationKeys.maxScaleCubes)
     self.maxExchangeCubes = aDecoder.decodeInteger(forKey: SerializationKeys.maxExchangeCubes)
+    self.avgSwitchCycleTime = aDecoder.decodeFloat(forKey: SerializationKeys.avgSwitchCycleTime)
+    self.avgScaleCycleTime = aDecoder.decodeFloat(forKey: SerializationKeys.avgScaleCycleTime)
+    self.avgExchangeCycleTime = aDecoder.decodeFloat(forKey: SerializationKeys.avgExchangeCycleTime)
   }
 
   public func encode(with aCoder: NSCoder) {
@@ -696,5 +711,8 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     aCoder.encode(teleopOpponentSwitchAbility, forKey: SerializationKeys.teleopOpponentSwitchAbility)
     aCoder.encode(maxScaleCubes, forKey: SerializationKeys.maxScaleCubes)
     aCoder.encode(maxExchangeCubes, forKey: SerializationKeys.maxExchangeCubes)
+    aCoder.encode(avgSwitchCycleTime, forKey: SerializationKeys.avgSwitchCycleTime)
+    aCoder.encode(avgScaleCycleTime, forKey: SerializationKeys.avgScaleCycleTime)
+    aCoder.encode(avgExchangeCycleTime, forKey: SerializationKeys.avgExchangeCycleTime)
   }
 }

@@ -45,6 +45,9 @@ public final class CalculatedTeamInMatchData: NSObject {
     static let switchOwnership = "switchOwnership"
     static let numCubesScaleAt100s = "numCubesScaleAt100s"
     static let numCubesScaleAt110s = "numCubesScaleAt110s"
+    static let switchCycleTime = "switchCycleTime"
+    static let scaleCycleTime = "scaleCycleTime"
+    static let exchangeCycleTime = "exchangeCycleTime"
 }
 
   // MARK: Properties
@@ -81,6 +84,9 @@ public final class CalculatedTeamInMatchData: NSObject {
     public var switchOwnership: Int?
     public var numCubesScaleAt100s: Int?
     public var numCubesScaleAt110s: Int?
+    public var switchCycleTime: Float?
+    public var scaleCycleTime: Float?
+    public var exchangeCycleTime: Float?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -128,6 +134,9 @@ public final class CalculatedTeamInMatchData: NSObject {
     switchOwnership = json[SerializationKeys.switchOwnership].int
     numCubesScaleAt100s = json[SerializationKeys.numCubesScaleAt100s].int
     numCubesScaleAt100s = json[SerializationKeys.numCubesScaleAt110s].int
+    switchCycleTime = json[SerializationKeys.switchCycleTime].float
+    scaleCycleTime = json[SerializationKeys.switchCycleTime].float
+    exchangeCycleTime = json[SerializationKeys.exchangeCycleTime].float
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -168,6 +177,9 @@ public final class CalculatedTeamInMatchData: NSObject {
     if let value = switchOwnership { dictionary[SerializationKeys.switchOwnership] = value }
     if let value = numCubesScaleAt100s { dictionary[SerializationKeys.numCubesScaleAt100s] = value }
     if let value = numCubesScaleAt110s { dictionary[SerializationKeys.numCubesScaleAt110s] = value }
+    if let value = switchCycleTime { dictionary[SerializationKeys.switchCycleTime] = value }
+    if let value = scaleCycleTime { dictionary[SerializationKeys.scaleCycleTime] = value }
+    if let value = exchangeCycleTime { dictionary[SerializationKeys.exchangeCycleTime] = value }
     return dictionary
   }
 
@@ -206,6 +218,9 @@ public final class CalculatedTeamInMatchData: NSObject {
     self.switchOwnership = aDecoder.decodeObject(forKey: SerializationKeys.switchOwnership) as? Int
     self.numCubesScaleAt100s = aDecoder.decodeObject(forKey: SerializationKeys.numCubesScaleAt100s) as? Int
     self.numCubesScaleAt110s = aDecoder.decodeObject(forKey: SerializationKeys.numCubesScaleAt110s) as? Int
+    self.switchCycleTime = aDecoder.decodeObject(forKey: SerializationKeys.switchCycleTime) as? Float
+    self.scaleCycleTime = aDecoder.decodeObject(forKey: SerializationKeys.scaleCycleTime) as? Float
+    self.exchangeCycleTime = aDecoder.decodeObject(forKey: SerializationKeys.exchangeCycleTime) as? Float
   }
 
   public func encode(with aCoder: NSCoder) {
@@ -242,6 +257,9 @@ public final class CalculatedTeamInMatchData: NSObject {
     aCoder.encode(switchOwnership, forKey: SerializationKeys.switchOwnership)
     aCoder.encode(numCubesScaleAt100s, forKey: SerializationKeys.numCubesScaleAt100s)
     aCoder.encode(numCubesScaleAt110s, forKey: SerializationKeys.numCubesScaleAt110s)
+    aCoder.encode(switchCycleTime, forKey: SerializationKeys.switchCycleTime)
+    aCoder.encode(scaleCycleTime, forKey: SerializationKeys.scaleCycleTime)
+    aCoder.encode(exchangeCycleTime, forKey: SerializationKeys.exchangeCycleTime)
   }
 
 }
