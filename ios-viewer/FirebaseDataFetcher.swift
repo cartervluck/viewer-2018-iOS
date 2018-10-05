@@ -281,6 +281,11 @@ class FirebaseDataFetcher: NSObject, UITableViewDelegate {
                         self.updateCacheIfNeeded(snapshot, team: team)
                         DispatchQueue.main.async {
                             //add the team to the list
+                            /*let existing_team = self.getTeam(team.number)
+                            if existing_team != nil {
+                                self.currentMatchManager.teams.remove(at:self.currentMatchManager.teams.index(of: existing_team!)!)
+                            }*/
+                            self.currentMatchManager.teams = self.currentMatchManager.teams.filter { $0.number != team.number }
                             self.currentMatchManager.teams.append(team)
                             self.notificationManager.queueNote("updateLeftTable", specialObject: team)
                         }
@@ -347,6 +352,16 @@ class FirebaseDataFetcher: NSObject, UITableViewDelegate {
                             if t.teamNumber == timd.teamNumber && t.matchNumber == timd.matchNumber { return true }
                             return false
                         })
+                        
+                        if tm.count < 1 {
+                            print(self.teamInMatches.filter({ $0.matchNumber == timd.matchNumber }))
+                            for tempt in self.teamInMatches.filter({ $0.matchNumber == timd.matchNumber }) {
+                                print(tempt as? [Any?])
+                                print(tempt.teamNumber)
+                            }
+                            print(String(timd.teamNumber!) + " - Q" + String(timd.matchNumber!))
+                        }
+                        
                         //find the index of the timd
                         if let index = self.teamInMatches.index(of: tm[0]) {
                             //replace the timd

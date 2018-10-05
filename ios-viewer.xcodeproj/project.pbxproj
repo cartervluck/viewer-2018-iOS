@@ -178,6 +178,7 @@
 		8C0A5D082082A65500AC1BB2 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		8C10DE94206C0A670084DC25 /* MatchDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		8C10DE95206C0A670084DC25 /* MatchDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		8C218422215FF01200F4A7E6 /* XC_iOS_Ad_Hoc_.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; name = XC_iOS_Ad_Hoc_.mobileprovision; path = ../../../../../Downloads/XC_iOS_Ad_Hoc_.mobileprovision; sourceTree = "<group>"; };
 		8C25A7CB1E33F2790012A23E /* CalculatedTeamInMatchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatedTeamInMatchData.swift; sourceTree = "<group>"; };
 		8C58686D1E34254E0056EA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		8C58687E1E3426200056EA17 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				8CD8FA691E5A2950004C2825 /* ios-viewer.entitlements */,
+				8C218422215FF01200F4A7E6 /* XC_iOS_Ad_Hoc_.mobileprovision */,
 				19B038361E2DD6EA006E25A2 /* Storyboards */,
 				19B038381E2DD74C006E25A2 /* Schedule */,
 				19B038391E2DD75B006E25A2 /* Seed */,
