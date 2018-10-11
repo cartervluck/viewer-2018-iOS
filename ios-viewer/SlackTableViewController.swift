@@ -35,8 +35,8 @@ class SlackTableViewController: ArrayTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : SlackTableViewCell = tableView.dequeueReusableCell(withIdentifier: "slackTableViewCell", for: indexPath) as! SlackTableViewCell
         if let castFiltered = filteredArray as? ([SlackProfile]!), filteredArray != nil {
-            cell.displayNameLabel.text = Array(castFiltered)[indexPath.row].name
-            cell.slackUsernameLabel.text = Array(castFiltered)[indexPath.row].tag
+            cell.displayNameLabel.text = Array(castFiltered!)[indexPath.row].name
+            cell.slackUsernameLabel.text = Array(castFiltered!)[indexPath.row].tag
         } else {
             cell.displayNameLabel.text = Array(self.firebaseFetcher!.slackProfiles.values)[indexPath.row].name
             cell.slackUsernameLabel.text = Array(self.firebaseFetcher!.slackProfiles.values)[indexPath.row].tag
