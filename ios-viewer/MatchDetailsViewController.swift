@@ -142,10 +142,12 @@ class MatchDetailsViewController: UIViewController, UITableViewDelegate, UITable
         } else {
             tableView.isScrollEnabled = false
         }
+        tableKeys = (firebaseFetcher?.currentMatchManager.matchDetailsDatapoints)!
         return tableKeys.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         if (firebaseFetcher?.currentMatchManager.matchDetailsScroll ?? false) {
             let boi = CGFloat(Double((firebaseFetcher?.currentMatchManager.textSize)!) * (Double((firebaseFetcher?.currentMatchManager.matchDetailsDatapoints[indexPath.row].count)!)/10.0))
             if boi <= CGFloat(20) {
