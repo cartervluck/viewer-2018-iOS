@@ -49,6 +49,8 @@ public final class TeamInMatchData: NSObject {
     static let teamNumber = "teamNumber"
     static let numExchangeInput = "numExchangeInput"
     static let numGoodDecisions = "numGoodDecisions"
+    static let didCrossAutoLine = "didCrossAutoLine"
+    static let startedWithCube = "startedWithCube"
   }
 
   // MARK: Properties
@@ -89,6 +91,8 @@ public final class TeamInMatchData: NSObject {
   public var teamNumber: Int?
   public var numExchangeInput: Int?
   public var numGoodDecisions: Int?
+    public var didCrossAutoLine: Bool?
+    public var startedWithCube: Bool?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -140,6 +144,7 @@ public final class TeamInMatchData: NSObject {
     teamNumber = json[SerializationKeys.teamNumber].int
     numExchangeInput = json[SerializationKeys.numExchangeInput].int
     numGoodDecisions = json[SerializationKeys.numGoodDecisions].int
+    startedWithCube = json[SerializationKeys.startedWithCube].bool
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -184,6 +189,8 @@ public final class TeamInMatchData: NSObject {
     if let value = teamNumber { dictionary[SerializationKeys.teamNumber] = value }
     if let value = numExchangeInput { dictionary[SerializationKeys.numExchangeInput] = value }
     if let value = numGoodDecisions { dictionary[SerializationKeys.numGoodDecisions] = value }
+    if let value = didCrossAutoLine { dictionary[SerializationKeys.didCrossAutoLine] = value }
+    if let value = startedWithCube { dictionary[SerializationKeys.startedWithCube] = value }
     return dictionary
   }
 
@@ -226,6 +233,8 @@ public final class TeamInMatchData: NSObject {
     self.teamNumber = aDecoder.decodeObject(forKey: SerializationKeys.teamNumber) as? Int
     self.numExchangeInput = aDecoder.decodeObject(forKey: SerializationKeys.numExchangeInput) as? Int
     self.numGoodDecisions = aDecoder.decodeObject(forKey: SerializationKeys.numGoodDecisions) as? Int
+    self.didCrossAutoLine = aDecoder.decodeObject(forKey: SerializationKeys.didCrossAutoLine) as? Bool
+    self.startedWithCube = aDecoder.decodeObject(forKey: SerializationKeys.startedWithCube) as? Bool
   }
 
   public func encode(with aCoder: NSCoder) {
@@ -266,6 +275,8 @@ public final class TeamInMatchData: NSObject {
     aCoder.encode(teamNumber, forKey: SerializationKeys.teamNumber)
     aCoder.encode(numExchangeInput, forKey: SerializationKeys.numExchangeInput)
     aCoder.encode(numGoodDecisions, forKey: SerializationKeys.numGoodDecisions)
+    aCoder.encode(didCrossAutoLine, forKey: SerializationKeys.didCrossAutoLine)
+    aCoder.encode(startedWithCube, forKey: SerializationKeys.startedWithCube)
   }
 
 }

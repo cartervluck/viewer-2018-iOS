@@ -121,8 +121,11 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     static let teleopOpponentSwitchAbility = "teleopOpponentSwitchAbility"
     static let maxScaleCubes = "maxScaleCubes"
     static let maxExchangeCubes = "maxExchangeCubes"
-    static let avgSwitchCycleTime = "avgSwitchCycleTime"
-    static let avgScaleCycleTime = "avgScaleCycleTime"
+    static let avgAllianceSwitchCycleTimeAuto = "avgAllianceSwitchCycleTimeAuto"
+    static let avgAllianceSwitchCycleTimeTele = "avgAllianceSwitchCycleTimeTele"
+    static let avgOpponentSwitchCycleTimeTele = "avgOpponentSwitchCycleTimeTele"
+    static let avgScaleCycleTimeAuto = "avgScaleCycleTimeAuto"
+    static let avgScaleCycleTimeTele = "avgScaleCycleTimeTele"
     static let avgExchangeCycleTime = "avgExchangeCycleTime"
  }
 
@@ -235,8 +238,11 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     @objc public var teleopOpponentSwitchAbility: Float = -1.0
     @objc public var maxScaleCubes: Int = -1
     @objc public var maxExchangeCubes: Int = -1
-    @objc public var avgSwitchCycleTime: Float = -1.0
-    @objc public var avgScaleCycleTime: Float = -1.0
+    @objc public var avgAllianceSwitchCycleTimeAuto: Float = -1.0
+    @objc public var avgAllianceSwitchCycleTimeTele: Float = -1.0
+    @objc public var avgOpponentSwitchCycleTimeTele: Float = -1.0
+    @objc public var avgScaleCycleTimeAuto: Float = -1.0
+    @objc public var avgScaleCycleTimeTele: Float = -1.0
     @objc public var avgExchangeCycleTime: Float = -1.0
 
   // MARK: SwiftyJSON Initializers
@@ -364,8 +370,11 @@ public final class CalculatedTeamData: NSObject, NSCoding {
        teleopOpponentSwitchAbility = json[SerializationKeys.teleopOpponentSwitchAbility].floatValue
        maxScaleCubes = json[SerializationKeys.maxScaleCubes].intValue
        maxExchangeCubes = json[SerializationKeys.maxExchangeCubes].intValue
-    avgSwitchCycleTime = json[SerializationKeys.avgSwitchCycleTime].floatValue
-    avgScaleCycleTime = json[SerializationKeys.avgScaleCycleTime].floatValue
+    avgAllianceSwitchCycleTimeAuto = json[SerializationKeys.avgAllianceSwitchCycleTimeAuto].floatValue
+    avgAllianceSwitchCycleTimeTele = json[SerializationKeys.avgAllianceSwitchCycleTimeTele].floatValue
+    avgOpponentSwitchCycleTimeTele = json[SerializationKeys.avgOpponentSwitchCycleTimeTele].floatValue
+    avgScaleCycleTimeAuto = json[SerializationKeys.avgScaleCycleTimeAuto].floatValue
+    avgScaleCycleTimeTele = json[SerializationKeys.avgScaleCycleTimeTele].floatValue
     avgExchangeCycleTime = json[SerializationKeys.avgExchangeCycleTime].floatValue
   }
 
@@ -484,8 +493,11 @@ public final class CalculatedTeamData: NSObject, NSCoding {
         dictionary[SerializationKeys.teleopOpponentSwitchAbility] = teleopOpponentSwitchAbility
         dictionary[SerializationKeys.maxScaleCubes] = maxScaleCubes
         dictionary[SerializationKeys.maxExchangeCubes] = maxExchangeCubes
-    dictionary[SerializationKeys.avgSwitchCycleTime] = avgSwitchCycleTime
-    dictionary[SerializationKeys.avgScaleCycleTime] = avgScaleCycleTime
+    dictionary[SerializationKeys.avgAllianceSwitchCycleTimeAuto] = avgAllianceSwitchCycleTimeAuto
+    dictionary[SerializationKeys.avgAllianceSwitchCycleTimeTele] = avgAllianceSwitchCycleTimeTele
+    dictionary[SerializationKeys.avgOpponentSwitchCycleTimeTele] = avgOpponentSwitchCycleTimeTele
+    dictionary[SerializationKeys.avgScaleCycleTimeAuto] = avgScaleCycleTimeAuto
+    dictionary[SerializationKeys.avgScaleCycleTimeTele] = avgScaleCycleTimeTele
     dictionary[SerializationKeys.avgExchangeCycleTime] = avgExchangeCycleTime
     return dictionary
   }
@@ -600,8 +612,11 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     self.teleopOpponentSwitchAbility = aDecoder.decodeFloat(forKey: SerializationKeys.teleopOpponentSwitchAbility)
     self.maxScaleCubes = aDecoder.decodeInteger(forKey: SerializationKeys.maxScaleCubes)
     self.maxExchangeCubes = aDecoder.decodeInteger(forKey: SerializationKeys.maxExchangeCubes)
-    self.avgSwitchCycleTime = aDecoder.decodeFloat(forKey: SerializationKeys.avgSwitchCycleTime)
-    self.avgScaleCycleTime = aDecoder.decodeFloat(forKey: SerializationKeys.avgScaleCycleTime)
+    self.avgAllianceSwitchCycleTimeAuto = aDecoder.decodeFloat(forKey: SerializationKeys.avgAllianceSwitchCycleTimeAuto)
+    self.avgAllianceSwitchCycleTimeTele = aDecoder.decodeFloat(forKey: SerializationKeys.avgAllianceSwitchCycleTimeTele)
+    self.avgOpponentSwitchCycleTimeTele = aDecoder.decodeFloat(forKey: SerializationKeys.avgOpponentSwitchCycleTimeTele)
+    self.avgScaleCycleTimeAuto = aDecoder.decodeFloat(forKey: SerializationKeys.avgScaleCycleTimeAuto)
+    self.avgScaleCycleTimeTele = aDecoder.decodeFloat(forKey: SerializationKeys.avgScaleCycleTimeTele)
     self.avgExchangeCycleTime = aDecoder.decodeFloat(forKey: SerializationKeys.avgExchangeCycleTime)
   }
 
@@ -711,8 +726,11 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     aCoder.encode(teleopOpponentSwitchAbility, forKey: SerializationKeys.teleopOpponentSwitchAbility)
     aCoder.encode(maxScaleCubes, forKey: SerializationKeys.maxScaleCubes)
     aCoder.encode(maxExchangeCubes, forKey: SerializationKeys.maxExchangeCubes)
-    aCoder.encode(avgSwitchCycleTime, forKey: SerializationKeys.avgSwitchCycleTime)
-    aCoder.encode(avgScaleCycleTime, forKey: SerializationKeys.avgScaleCycleTime)
+    aCoder.encode(avgAllianceSwitchCycleTimeAuto, forKey: SerializationKeys.avgAllianceSwitchCycleTimeAuto)
+    aCoder.encode(avgAllianceSwitchCycleTimeTele, forKey: SerializationKeys.avgAllianceSwitchCycleTimeTele)
+    aCoder.encode(avgOpponentSwitchCycleTimeTele, forKey: SerializationKeys.avgOpponentSwitchCycleTimeTele)
+    aCoder.encode(avgScaleCycleTimeAuto, forKey: SerializationKeys.avgScaleCycleTimeAuto)
+    aCoder.encode(avgScaleCycleTimeTele, forKey: SerializationKeys.avgScaleCycleTimeTele)
     aCoder.encode(avgExchangeCycleTime, forKey: SerializationKeys.avgExchangeCycleTime)
   }
 }

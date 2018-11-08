@@ -223,8 +223,11 @@ func nsNumArrayToIntArray(_ nsNumberArray: [NSNumber]) -> [Int] {
             "calculatedData.RScoreSpeed",
             "calculatedData.RScoreAgility",
             "calculatedData.RScoreDrivingAbility",
-            "calculatedData.avgSwitchCycleTime",
-            "calculatedData.avgScaleCycleTime",
+            "calculatedData.avgAllianceSwitchCycleTimeAuto",
+            "calculatedData.avgAllianceSwitchCycleTimeTele",
+            "calculatedData.avgOpponentSwitchCycleTimeTele",
+            "calculatedData.avgScaleCycleTimeAuto",
+            "calculatedData.avgScaleCycleTimeTele",
             "calculatedData.avgExchangeCycleTime",
         ]
         
@@ -522,7 +525,9 @@ func nsNumArrayToIntArray(_ nsNumberArray: [NSNumber]) -> [Int] {
         "didMakeAutoRun",
         "numCubesFumbledAuto",
         "calculatedData.numAllianceSwitchCubeSuccessAuto",
-        "calculatedData.numScaleSuccessAuto"
+        "calculatedData.numScaleSuccessAuto",
+        "didCrossAutoLine",
+        "startedWithCube",
     ]
     
     /** Keys relating to the Teleoperated period to be displayed in the TIMD view */
@@ -797,9 +802,14 @@ func nsNumArrayToIntArray(_ nsNumberArray: [NSNumber]) -> [Int] {
         "calculatedData.maxScaleCubes" : "Max SC Cubes",
         "calculatedData.maxExchangeCubes" : "Max EX Cubes",
         "calculatedData.avgSwitchOwnership" : "Avg. Switch Ownership",
-        "calculatedData.avgSwitchCycleTime" : "Avg. Switch Cycle Time",
-        "calculatedData.avgScaleCycleTime" : "Avg. Scale Cycle Time",
+        "calculatedData.avgAllianceSwitchCycleTimeAuto" : "Avg. SW Cycle Time Auto",
+        "calculatedData.avgAllianceSwitchCycleTimeTele" : "Avg. SW Cycle Time Tele",
+        "calculatedData.avgOpponentSwitchCycleTimeTele" : "Avg. SWO Cycle Time Tele",
+        "calculatedData.avgScaleCycleTimeAuto" : "Avg. SC Cycle Time Auto",
+        "calculatedData.avgScaleCycleTimeTele" : "Avg. SC Cycle Time Tele",
         "calculatedData.avgExchangeCycleTime" : "Avg. Exchange Cycle Time",
+        "didCrossAutoLine" : "Crossed Auto Line",
+        "startedWithCube" : "Started With Cube",
     ]
     
     /**
