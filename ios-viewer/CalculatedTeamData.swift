@@ -127,6 +127,27 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     static let avgScaleCycleTimeAuto = "avgScaleCycleTimeAuto"
     static let avgScaleCycleTimeTele = "avgScaleCycleTimeTele"
     static let avgExchangeCycleTime = "avgExchangeCycleTime"
+    static let avgNumCubesDroppedAuto = "avgNumCubesDroppedAuto"
+    static let avgNumCubesDroppedTele = "avgNumCubesDroppedTele"
+    static let lfmAvgNumRobotsLifted = "lfmAvgNumRobotsLifted"
+    static let lfmAvgNumCubesPlacedAuto = "lfmAvgNumCubesPlacedAuto"
+    static let lfmAvgNumCubesPlacedTele = "lfmAvgNumCubesPlacedTele"
+    static let lfmAvgNumCubesDroppedAuto = "lfmAvgNumCubesDroppedAuto"
+    static let lfmAvgNumCubesDroppedTele = "lfmAvgNumCubesDroppedTele"
+    static let lfmAvgNumExchangeInputTele = "lfmAvgNumExchangeInputTele"
+    static let lfmAvgNumGoodDecisions = "lfmAvgNumGoodDecisions"
+    static let lfmAvgNumBadDecisions = "lfmAvgNumBadDecisions"
+    static let lfmAvgCubesSpilledAuto = "lfmAvgCubesSpilledAuto"
+    static let lfmAvgCubesSpilledTele = "lfmAvgCubesSpilledTele"
+    static let lfmAvgCubesPlacedInScaleAuto = "lfmAvgCubesPlacedInScaleAuto"
+    static let lfmAvgCubesPlacedInScaleTele = "lfmAvgCubesPlacedInScaleTele"
+    static let lfmAvgAllianceSwitchCubesAuto = "lfmAvgAllianceSwitchCubesAuto"
+    static let lfmAvgAllianceSwitchCubesTele = "lfmAvgAllianceSwitchCubesTele"
+    static let lfmAvgOpponentSwitchCubesTele = "lfmAvgOpponentSwitchCubesTele"
+    static let lfmAvgSpeed = "lfmAvgSpeed"
+    static let lfmAvgDefense = "lfmAvgDefense"
+    static let lfmAvgAgility = "lfmAvgAgility"
+    static let lfmAvgDrivingAbility = "lfmAvgDrivingAbility"
  }
 
   // MARK: Properties
@@ -244,6 +265,27 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     @objc public var avgScaleCycleTimeAuto: Float = -1.0
     @objc public var avgScaleCycleTimeTele: Float = -1.0
     @objc public var avgExchangeCycleTime: Float = -1.0
+    @objc public var avgNumCubesDroppedAuto: Float = -1.0
+    @objc public var avgNumCubesDroppedTele: Float = -1.0
+    @objc public var lfmAvgNumRobotsLifted: Float = -1.0
+    @objc public var lfmAvgNumCubesPlacedAuto: Float = -1.0
+    @objc public var lfmAvgNumCubesPlacedTele: Float = -1.0
+    @objc public var lfmAvgNumCubesDroppedAuto: Float = -1.0
+    @objc public var lfmAvgNumCubesDroppedTele: Float = -1.0
+    @objc public var lfmAvgNumExchangeInputTele: Float = -1.0
+    @objc public var lfmAvgNumGoodDecisions: Float = -1.0
+    @objc public var lfmAvgNumBadDecisions: Float = -1.0
+    @objc public var lfmAvgCubesSpilledAuto: Float = -1.0
+    @objc public var lfmAvgCubesSpilledTele: Float = -1.0
+    @objc public var lfmAvgCubesPlacedInScaleAuto: Float = -1.0
+    @objc public var lfmAvgCubesPlacedInScaleTele: Float = -1.0
+    @objc public var lfmAvgAllianceSwitchCubesAuto: Float = -1.0
+    @objc public var lfmAvgAllianceSwitchCubesTele: Float = -1.0
+    @objc public var lfmAvgOpponentSwitchCubesTele: Float = -1.0
+    @objc public var lfmAvgSpeed: Float = -1.0
+    @objc public var lfmAvgDefense: Float = -1.0
+    @objc public var lfmAvgAgility: Float = -1.0
+    @objc public var lfmAvgDrivingAbility: Float = -1.0
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -376,6 +418,27 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     avgScaleCycleTimeAuto = json[SerializationKeys.avgScaleCycleTimeAuto].floatValue
     avgScaleCycleTimeTele = json[SerializationKeys.avgScaleCycleTimeTele].floatValue
     avgExchangeCycleTime = json[SerializationKeys.avgExchangeCycleTime].floatValue
+    avgNumCubesDroppedAuto = json[SerializationKeys.avgNumCubesDroppedAuto].floatValue
+    avgNumCubesDroppedTele = json[SerializationKeys.avgNumCubesDroppedTele].floatValue
+    lfmAvgNumRobotsLifted = json[SerializationKeys.lfmAvgNumRobotsLifted].floatValue
+    lfmAvgNumCubesPlacedAuto = json[SerializationKeys.lfmAvgNumCubesPlacedAuto].floatValue
+    lfmAvgNumCubesPlacedTele = json[SerializationKeys.lfmAvgNumCubesPlacedTele].floatValue
+    lfmAvgNumCubesDroppedAuto = json[SerializationKeys.lfmAvgNumCubesDroppedAuto].floatValue
+    lfmAvgNumCubesDroppedTele = json[SerializationKeys.lfmAvgNumCubesDroppedTele].floatValue
+    lfmAvgNumExchangeInputTele = json[SerializationKeys.lfmAvgNumExchangeInputTele].floatValue
+    lfmAvgNumGoodDecisions = json[SerializationKeys.lfmAvgNumGoodDecisions].floatValue
+    lfmAvgNumBadDecisions = json[SerializationKeys.lfmAvgNumBadDecisions].floatValue
+    lfmAvgCubesSpilledAuto = json[SerializationKeys.lfmAvgCubesSpilledAuto].floatValue
+    lfmAvgCubesSpilledTele = json[SerializationKeys.lfmAvgCubesSpilledTele].floatValue
+    lfmAvgCubesPlacedInScaleAuto = json[SerializationKeys.lfmAvgCubesPlacedInScaleAuto].floatValue
+    lfmAvgCubesPlacedInScaleTele = json[SerializationKeys.lfmAvgCubesPlacedInScaleTele].floatValue
+    lfmAvgAllianceSwitchCubesAuto = json[SerializationKeys.lfmAvgAllianceSwitchCubesAuto].floatValue
+    lfmAvgAllianceSwitchCubesTele = json[SerializationKeys.lfmAvgAllianceSwitchCubesTele].floatValue
+    lfmAvgOpponentSwitchCubesTele = json[SerializationKeys.lfmAvgOpponentSwitchCubesTele].floatValue
+    lfmAvgSpeed = json[SerializationKeys.lfmAvgSpeed].floatValue
+    lfmAvgDefense = json[SerializationKeys.lfmAvgDefense].floatValue
+    lfmAvgAgility = json[SerializationKeys.lfmAvgAgility].floatValue
+    lfmAvgDrivingAbility = json[SerializationKeys.lfmAvgDrivingAbility].floatValue
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -499,6 +562,27 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     dictionary[SerializationKeys.avgScaleCycleTimeAuto] = avgScaleCycleTimeAuto
     dictionary[SerializationKeys.avgScaleCycleTimeTele] = avgScaleCycleTimeTele
     dictionary[SerializationKeys.avgExchangeCycleTime] = avgExchangeCycleTime
+    dictionary[SerializationKeys.avgNumCubesDroppedAuto] = avgNumCubesDroppedAuto
+    dictionary[SerializationKeys.avgNumCubesDroppedTele] = avgNumCubesDroppedTele
+    dictionary[SerializationKeys.lfmAvgNumRobotsLifted] = lfmAvgNumRobotsLifted
+    dictionary[SerializationKeys.lfmAvgNumCubesPlacedAuto] = lfmAvgNumCubesPlacedAuto
+    dictionary[SerializationKeys.lfmAvgNumCubesPlacedTele] = lfmAvgNumCubesPlacedTele
+    dictionary[SerializationKeys.lfmAvgNumCubesDroppedAuto] = lfmAvgNumCubesDroppedAuto
+    dictionary[SerializationKeys.lfmAvgNumCubesDroppedTele] = lfmAvgNumCubesDroppedTele
+    dictionary[SerializationKeys.lfmAvgNumExchangeInputTele] = lfmAvgNumExchangeInputTele
+    dictionary[SerializationKeys.lfmAvgNumGoodDecisions] = lfmAvgNumGoodDecisions
+    dictionary[SerializationKeys.lfmAvgNumBadDecisions] = lfmAvgNumBadDecisions
+    dictionary[SerializationKeys.lfmAvgCubesSpilledAuto] = lfmAvgCubesSpilledAuto
+    dictionary[SerializationKeys.lfmAvgCubesSpilledTele] = lfmAvgCubesSpilledTele
+    dictionary[SerializationKeys.lfmAvgCubesPlacedInScaleAuto] = lfmAvgCubesPlacedInScaleAuto
+    dictionary[SerializationKeys.lfmAvgCubesPlacedInScaleTele] = lfmAvgCubesPlacedInScaleTele
+    dictionary[SerializationKeys.lfmAvgAllianceSwitchCubesAuto] = lfmAvgAllianceSwitchCubesAuto
+    dictionary[SerializationKeys.lfmAvgAllianceSwitchCubesTele] = lfmAvgAllianceSwitchCubesTele
+    dictionary[SerializationKeys.lfmAvgOpponentSwitchCubesTele] = lfmAvgOpponentSwitchCubesTele
+    dictionary[SerializationKeys.lfmAvgSpeed] = lfmAvgSpeed
+    dictionary[SerializationKeys.lfmAvgDefense] = lfmAvgDefense
+    dictionary[SerializationKeys.lfmAvgAgility] = lfmAvgAgility
+    dictionary[SerializationKeys.lfmAvgDrivingAbility] = lfmAvgDrivingAbility
     return dictionary
   }
 
@@ -618,6 +702,27 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     self.avgScaleCycleTimeAuto = aDecoder.decodeFloat(forKey: SerializationKeys.avgScaleCycleTimeAuto)
     self.avgScaleCycleTimeTele = aDecoder.decodeFloat(forKey: SerializationKeys.avgScaleCycleTimeTele)
     self.avgExchangeCycleTime = aDecoder.decodeFloat(forKey: SerializationKeys.avgExchangeCycleTime)
+    self.avgNumCubesDroppedAuto = aDecoder.decodeFloat(forKey: SerializationKeys.avgNumCubesDroppedAuto)
+    self.avgNumCubesDroppedTele = aDecoder.decodeFloat(forKey: SerializationKeys.avgNumCubesDroppedTele)
+    self.lfmAvgNumRobotsLifted = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumRobotsLifted)
+    self.lfmAvgNumCubesPlacedAuto = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumCubesPlacedAuto)
+    self.lfmAvgNumCubesPlacedTele = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumCubesPlacedTele)
+    self.lfmAvgNumCubesDroppedAuto = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumCubesDroppedAuto)
+    self.lfmAvgNumCubesDroppedTele = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumCubesDroppedTele)
+    self.lfmAvgNumExchangeInputTele = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumExchangeInputTele)
+    self.lfmAvgNumGoodDecisions = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumGoodDecisions)
+    self.lfmAvgNumBadDecisions = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgNumBadDecisions)
+    self.lfmAvgCubesSpilledAuto = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgCubesSpilledAuto)
+    self.lfmAvgCubesSpilledTele = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgCubesSpilledTele)
+    self.lfmAvgCubesPlacedInScaleAuto = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgCubesPlacedInScaleAuto)
+    self.lfmAvgCubesPlacedInScaleTele = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgCubesPlacedInScaleTele)
+    self.lfmAvgAllianceSwitchCubesAuto = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgAllianceSwitchCubesAuto)
+    self.lfmAvgAllianceSwitchCubesTele = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgAllianceSwitchCubesTele)
+    self.lfmAvgOpponentSwitchCubesTele = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgOpponentSwitchCubesTele)
+    self.lfmAvgSpeed = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgSpeed)
+    self.lfmAvgDefense = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgDefense)
+    self.lfmAvgAgility = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgAgility)
+    self.lfmAvgDrivingAbility = aDecoder.decodeFloat(forKey: SerializationKeys.lfmAvgDrivingAbility)
   }
 
   public func encode(with aCoder: NSCoder) {
@@ -732,5 +837,26 @@ public final class CalculatedTeamData: NSObject, NSCoding {
     aCoder.encode(avgScaleCycleTimeAuto, forKey: SerializationKeys.avgScaleCycleTimeAuto)
     aCoder.encode(avgScaleCycleTimeTele, forKey: SerializationKeys.avgScaleCycleTimeTele)
     aCoder.encode(avgExchangeCycleTime, forKey: SerializationKeys.avgExchangeCycleTime)
+    aCoder.encode(avgNumCubesDroppedAuto, forKey: SerializationKeys.avgNumCubesDroppedAuto)
+    aCoder.encode(avgNumCubesDroppedTele, forKey: SerializationKeys.avgNumCubesDroppedTele)
+    aCoder.encode(lfmAvgNumRobotsLifted, forKey: SerializationKeys.lfmAvgNumRobotsLifted)
+    aCoder.encode(lfmAvgNumCubesPlacedAuto, forKey: SerializationKeys.lfmAvgNumCubesPlacedAuto)
+    aCoder.encode(lfmAvgNumCubesPlacedTele, forKey: SerializationKeys.lfmAvgNumCubesPlacedTele)
+    aCoder.encode(lfmAvgNumCubesDroppedAuto, forKey: SerializationKeys.lfmAvgNumCubesDroppedAuto)
+    aCoder.encode(lfmAvgNumCubesDroppedTele, forKey: SerializationKeys.lfmAvgNumCubesDroppedTele)
+    aCoder.encode(lfmAvgNumExchangeInputTele, forKey: SerializationKeys.lfmAvgNumExchangeInputTele)
+    aCoder.encode(lfmAvgNumGoodDecisions, forKey: SerializationKeys.lfmAvgNumGoodDecisions)
+    aCoder.encode(lfmAvgNumBadDecisions, forKey: SerializationKeys.lfmAvgNumBadDecisions)
+    aCoder.encode(lfmAvgCubesSpilledAuto, forKey: SerializationKeys.lfmAvgCubesSpilledAuto)
+    aCoder.encode(lfmAvgCubesSpilledTele, forKey: SerializationKeys.lfmAvgCubesSpilledTele)
+    aCoder.encode(lfmAvgCubesPlacedInScaleAuto, forKey: SerializationKeys.lfmAvgCubesPlacedInScaleAuto)
+    aCoder.encode(lfmAvgCubesPlacedInScaleTele, forKey: SerializationKeys.lfmAvgCubesPlacedInScaleTele)
+    aCoder.encode(lfmAvgAllianceSwitchCubesAuto, forKey: SerializationKeys.lfmAvgAllianceSwitchCubesAuto)
+    aCoder.encode(lfmAvgAllianceSwitchCubesTele, forKey: SerializationKeys.lfmAvgAllianceSwitchCubesTele)
+    aCoder.encode(lfmAvgOpponentSwitchCubesTele, forKey: SerializationKeys.lfmAvgOpponentSwitchCubesTele)
+    aCoder.encode(lfmAvgSpeed, forKey: SerializationKeys.lfmAvgSpeed)
+    aCoder.encode(lfmAvgDefense, forKey: SerializationKeys.lfmAvgDefense)
+    aCoder.encode(lfmAvgAgility, forKey: SerializationKeys.lfmAvgAgility)
+    aCoder.encode(lfmAvgDrivingAbility, forKey: SerializationKeys.lfmAvgDrivingAbility)
   }
 }

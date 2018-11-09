@@ -51,6 +51,18 @@ public final class CalculatedTeamInMatchData: NSObject {
     static let scaleCycleTimeAuto = "scaleCycleTimeAuto"
     static let scaleCycleTimeTele = "scaleCycleTimeTele"
     static let exchangeCycleTime = "exchangeCycleTime"
+    static let numAllianceSwitchAuto = "numAllianceSwitchAuto"
+    static let numAllianceSwitchTele = "numAllianceSwitchTele"
+    static let numOpponentSwitchTele = "numOpponentSwitchTele"
+    static let numScaleAuto = "numScaleAuto"
+    static let numScaleTele = "numScaleTele"
+    static let avgVaultTime = "avgVaultTime"
+    static let totalCubesPlaced = "totalCubesPlaced"
+    static let numExchangeInput = "numExchangeInput"
+    static let numCubesDroppedAuto = "numCubesDroppedAuto"
+    static let numCubesDroppedTele = "numCubesDroppedTele"
+    static let numSpilledCubesAuto = "numSpilledCubesAuto"
+    static let numSpilledCubesTele = "numSpilledCubesTele"
 }
 
   // MARK: Properties
@@ -93,6 +105,18 @@ public final class CalculatedTeamInMatchData: NSObject {
     public var scaleCycleTimeAuto: Float?
     public var scaleCycleTimeTele: Float?
     public var exchangeCycleTime: Float?
+    public var numAllianceSwitchAuto: Int?
+    public var numAllianceSwitchTele: Int?
+    public var numOpponentSwitchTele: Int?
+    public var numScaleAuto: Int?
+    public var numScaleTele: Int?
+    public var avgVaultTime: Float?
+    public var totalCubesPlaced: Int?
+    public var numExchangeInput: Int?
+    public var numCubesDroppedAuto: Int?
+    public var numCubesDroppedTele: Int?
+    public var numSpilledCubesAuto: Int?
+    public var numSpilledCubesTele: Int?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -146,6 +170,18 @@ public final class CalculatedTeamInMatchData: NSObject {
     scaleCycleTimeAuto = json[SerializationKeys.scaleCycleTimeAuto].float
     scaleCycleTimeTele = json[SerializationKeys.scaleCycleTimeTele].float
     exchangeCycleTime = json[SerializationKeys.exchangeCycleTime].float
+    numAllianceSwitchAuto = json[SerializationKeys.numAllianceSwitchAuto].int
+    numAllianceSwitchTele = json[SerializationKeys.numAllianceSwitchTele].int
+    numOpponentSwitchTele = json[SerializationKeys.numOpponentSwitchTele].int
+    numScaleAuto = json[SerializationKeys.numScaleAuto].int
+    numScaleTele = json[SerializationKeys.numScaleTele].int
+    avgVaultTime = json[SerializationKeys.avgVaultTime].float
+    totalCubesPlaced = json[SerializationKeys.totalCubesPlaced].int
+    numExchangeInput = json[SerializationKeys.numExchangeInput].int
+    numCubesDroppedAuto = json[SerializationKeys.numCubesDroppedAuto].int
+    numCubesDroppedTele = json[SerializationKeys.numCubesDroppedTele].int
+    numSpilledCubesAuto = json[SerializationKeys.numSpilledCubesAuto].int
+    numSpilledCubesTele = json[SerializationKeys.numSpilledCubesTele].int
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -192,6 +228,18 @@ public final class CalculatedTeamInMatchData: NSObject {
     if let value = scaleCycleTimeAuto { dictionary[SerializationKeys.scaleCycleTimeAuto] = value }
     if let value = scaleCycleTimeTele { dictionary[SerializationKeys.scaleCycleTimeTele] = value }
     if let value = exchangeCycleTime { dictionary[SerializationKeys.exchangeCycleTime] = value }
+    if let value = numAllianceSwitchAuto { dictionary[SerializationKeys.numAllianceSwitchAuto] = value }
+    if let value = numAllianceSwitchTele { dictionary[SerializationKeys.numAllianceSwitchTele] = value }
+    if let value = numOpponentSwitchTele { dictionary[SerializationKeys.numOpponentSwitchTele] = value }
+    if let value = numScaleAuto { dictionary[SerializationKeys.numScaleAuto] = value }
+    if let value = numScaleTele { dictionary[SerializationKeys.numScaleTele] = value }
+    if let value = avgVaultTime { dictionary[SerializationKeys.avgVaultTime] = value }
+    if let value = totalCubesPlaced { dictionary[SerializationKeys.totalCubesPlaced] = value }
+    if let value = numExchangeInput { dictionary[SerializationKeys.numExchangeInput] = value }
+    if let value = numCubesDroppedAuto { dictionary[SerializationKeys.numCubesDroppedAuto] = value }
+    if let value = numCubesDroppedTele { dictionary[SerializationKeys.numCubesDroppedTele] = value }
+    if let value = numSpilledCubesAuto { dictionary[SerializationKeys.numSpilledCubesAuto] = value }
+    if let value = numSpilledCubesTele { dictionary[SerializationKeys.numSpilledCubesTele] = value }
     return dictionary
   }
 
@@ -236,6 +284,18 @@ public final class CalculatedTeamInMatchData: NSObject {
     self.scaleCycleTimeAuto = aDecoder.decodeObject(forKey: SerializationKeys.scaleCycleTimeAuto) as? Float
     self.scaleCycleTimeTele = aDecoder.decodeObject(forKey: SerializationKeys.scaleCycleTimeTele) as? Float
     self.exchangeCycleTime = aDecoder.decodeObject(forKey: SerializationKeys.exchangeCycleTime) as? Float
+    self.numAllianceSwitchAuto = aDecoder.decodeObject(forKey: SerializationKeys.numAllianceSwitchAuto) as? Int
+    self.numAllianceSwitchTele = aDecoder.decodeObject(forKey: SerializationKeys.numAllianceSwitchTele) as? Int
+    self.numOpponentSwitchTele = aDecoder.decodeObject(forKey: SerializationKeys.numOpponentSwitchTele) as? Int
+    self.numScaleAuto = aDecoder.decodeObject(forKey: SerializationKeys.numOpponentSwitchTele) as? Int
+    self.numScaleTele = aDecoder.decodeObject(forKey: SerializationKeys.numScaleTele) as? Int
+    self.avgVaultTime = aDecoder.decodeObject(forKey: SerializationKeys.avgVaultTime) as? Float
+    self.totalCubesPlaced = aDecoder.decodeObject(forKey: SerializationKeys.totalCubesPlaced) as? Int
+    self.numExchangeInput = aDecoder.decodeObject(forKey: SerializationKeys.numExchangeInput) as? Int
+    self.numCubesDroppedAuto = aDecoder.decodeObject(forKey: SerializationKeys.numCubesDroppedAuto) as? Int
+    self.numCubesDroppedTele = aDecoder.decodeObject(forKey: SerializationKeys.numCubesDroppedTele) as? Int
+    self.numSpilledCubesAuto = aDecoder.decodeObject(forKey: SerializationKeys.numSpilledCubesAuto) as? Int
+    self.numSpilledCubesTele = aDecoder.decodeObject(forKey: SerializationKeys.numSpilledCubesTele) as? Int
   }
 
   public func encode(with aCoder: NSCoder) {
@@ -278,5 +338,17 @@ public final class CalculatedTeamInMatchData: NSObject {
     aCoder.encode(scaleCycleTimeAuto, forKey: SerializationKeys.scaleCycleTimeAuto)
     aCoder.encode(scaleCycleTimeTele, forKey: SerializationKeys.scaleCycleTimeTele)
     aCoder.encode(exchangeCycleTime, forKey: SerializationKeys.exchangeCycleTime)
+    aCoder.encode(numAllianceSwitchAuto, forKey: SerializationKeys.numAllianceSwitchAuto)
+    aCoder.encode(numAllianceSwitchTele, forKey: SerializationKeys.numAllianceSwitchTele)
+    aCoder.encode(numOpponentSwitchTele, forKey: SerializationKeys.numOpponentSwitchTele)
+    aCoder.encode(numScaleAuto, forKey: SerializationKeys.numScaleAuto)
+    aCoder.encode(numScaleTele, forKey: SerializationKeys.numScaleTele)
+    aCoder.encode(avgVaultTime, forKey: SerializationKeys.avgVaultTime)
+    aCoder.encode(totalCubesPlaced, forKey: SerializationKeys.totalCubesPlaced)
+    aCoder.encode(numExchangeInput, forKey: SerializationKeys.numExchangeInput)
+    aCoder.encode(numCubesDroppedAuto, forKey: SerializationKeys.numCubesDroppedAuto)
+    aCoder.encode(numCubesDroppedTele, forKey: SerializationKeys.numCubesDroppedTele)
+    aCoder.encode(numSpilledCubesAuto, forKey: SerializationKeys.numSpilledCubesAuto)
+    aCoder.encode(numSpilledCubesTele, forKey: SerializationKeys.numSpilledCubesTele)
   }
 }

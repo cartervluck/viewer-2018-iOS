@@ -810,6 +810,12 @@ func nsNumArrayToIntArray(_ nsNumberArray: [NSNumber]) -> [Int] {
         "calculatedData.avgExchangeCycleTime" : "Avg. Exchange Cycle Time",
         "didCrossAutoLine" : "Crossed Auto Line",
         "startedWithCube" : "Started With Cube",
+        //"numSpilledCubesTele" : "Cubes Spilled Tele",
+        //"numExchangeInput" : "Exchange Inputs",
+        "numCubesDroppedAuto" : "Cubes Dropped Auto",
+        "numCubesDroppedTele" : "Cubes Dropped Tele",
+        "numSpilledCubesAuto" : "Cubes Spilled Auto",
+        "numSpilledCubesTele" : "Cubes Spilled Tele",
     ]
     
     /**
